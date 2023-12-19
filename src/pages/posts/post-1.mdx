@@ -7,7 +7,7 @@ author: 'Astro Learner'
 image:
     url: '/src/assets/Shimla.jpg'
     alt: 'The full Astro logo.'
-    blur: '/src/assets/Shimla-blur.jpg'
+    blur: '/public/Shimla-blur.jpg'
 tags: ["astro", "blogging", "learning in public"]
 location: 'Shimla, HP'
 ---
@@ -17,9 +17,8 @@ import ShimlaImage from '../../assets/Shimla.jpg'
 
 <BlogPostHeading title={frontmatter.title} />
 
-![frontmatter.image.alt](../../assets/Shimla.jpg)
-
-<Image src={ShimlaImage} alt={frontmatter.image.alt} />
+<Image src={ShimlaImage} alt={frontmatter.image.alt} widths={[240, 540, 720, ShimlaImage.width]}
+  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} />
 
 
 Shimla offers much more than charming colonial buildings against a backdrop of the magnificent snow-capped Himalayas.
