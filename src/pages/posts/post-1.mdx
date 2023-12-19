@@ -3,12 +3,11 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Shimla Mornings'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
 image:
     url: '/src/assets/Shimla.jpg'
     alt: 'The full Astro logo.'
     blur: './Shimla-blur.jpg'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["Blogging", "Tech", "Travel"]
 location: 'Shimla, HP'
 ---
 import { Image } from 'astro:assets'
@@ -19,7 +18,7 @@ import ShimlaImage from '../../assets/Shimla.jpg'
 <BlogPostHeading title={frontmatter.title} />
 <br></br>
 <Image src={ShimlaImage} alt={frontmatter.image.alt} widths={[240, 540, 720, ShimlaImage.width]}
-  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} />
+  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} class="object-center object-cover"/>
 
 <br></br>
 Shimla offers much more than charming colonial buildings against a backdrop of the magnificent snow-capped Himalayas.
