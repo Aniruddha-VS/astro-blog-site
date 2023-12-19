@@ -1,0 +1,8 @@
+---
+import BlogPost from "./BlogPost.astro";
+import "../styles/global.css"
+const allPosts = await Astro.glob('../pages/posts/*.mdx');
+---
+<div class="py-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-6" id="custom-grid" >
+    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} imagePath={post.frontmatter.image.url} location={post.frontmatter.location} altText={post.frontmatter.image.alt} blurUrl={post.frontmatter.image.blur}></BlogPost>)}
+</div>

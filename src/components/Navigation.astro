@@ -1,0 +1,50 @@
+---
+import '../styles/global.css'
+import Hamburger from "./Hamburger.astro";
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+    <button title="menu-btn" id="menu-button" type="button" class="md:hidden z-[2]">
+        <Hamburger />
+    </button>
+
+    <nav class="md-nav">
+        <li class="hover:text-teal-700 dark:hover:text-yellow-500"><a href="/about">About</a></li>
+        <li class="hover:text-teal-700 dark:hover:text-yellow-500"><a href="/places">Places</a></li>
+        <ThemeIcon></ThemeIcon>
+    </nav>
+
+    <div class="hidden mobile-menu expanded ">
+        <li class="hover:text-teal-700 dark:hover:text-yellow-500"><a href="/about">About</a></li>
+        <li class="hover:text-teal-700 dark:hover:text-yellow-500"><a href="/places">Places</a></li>
+        <ThemeIcon></ThemeIcon>
+    </div>
+
+
+<script>
+    
+    document.addEventListener("astro:page-load", () => {
+        const menu = document.querySelector('#menu-button');
+        const mobilenav = document.querySelector(".mobile-menu")
+        menu.addEventListener('click', (event) => {
+            event.stopPropagation()
+            mobilenav.classList.toggle('hidden');
+        });
+
+        console.log(document.querySelectorAll(".mobile-menu > li"))
+        document.querySelectorAll(".mobile-menu > li").forEach( (ele)=> {
+            ele.addEventListener('click', (event) => {
+                event.stopPropagation()
+                mobilenav.classList.toggle('hidden');
+            })
+        });
+
+        document.addEventListener('click', function (event) {
+            if ( event.target !== menu && ! mobilenav.classList.contains('hidden')) {
+                mobilenav.classList.add('hidden')
+            }
+        });
+    });
+
+</script>
+

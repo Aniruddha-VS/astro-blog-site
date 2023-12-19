@@ -1,0 +1,33 @@
+---
+import BlogPostHeading from "./BlogPostHeading.astro";
+const pageHeading = "About Me"
+
+const allPosts = await Astro.glob('../pages/posts/*.mdx');
+const uniqueLocations= [...new Set(allPosts.map((post) => post.frontmatter.location).flat())];
+
+---
+
+<div class="flex flex-col font-lora pt-8 max-w-3xl mx-auto text-lg md:text-xl md:leading-8">
+    
+    
+    <div class="py-12">
+        <BlogPostHeading title={pageHeading}></BlogPostHeading>
+        <br>
+        <p>Hello there,</p>
+        <br>
+        <p> I'm Aniruddha Surse, a DevOps Engineer, part-time Web Developer (like the one who made this website), and a full-time fan of swimming and chess. I graduated with a Bachelor's degree in Technology from one of India's top engineering institutes, Visvesvaraya National Institute of Technology.</p>
+        <br>
+        <p>I've put together this website to share my recent travels with you, including the highlights and low points, like the amazing things that made me say "WOW" (you can find them under the tags section). These can be delicious food, impressive landmarks, or stunning views.</p>
+        <br>
+        <p>The idea for this travel blog came to me after a solo trip to Mahabaleshwar when I was thinking about what I'd remember for my next adventure and what advice I'd give to someone visiting for the first time. I hope I can help you avoid some of the mistakes I've made and ensure you have a fantastic time on your travels.</p>
+        <br>
+        <p>Here are some of my blogs </p>
+        <br>
+            {
+                allPosts.map((post) => <a href={post.url}><li> {post.frontmatter.title} </li></a>)
+            }
+    </div>
+
+    
+
+</div>
