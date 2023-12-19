@@ -31,7 +31,6 @@ import ThemeIcon from "./ThemeIcon.astro";
             mobilenav.classList.toggle('hidden');
         });
 
-        console.log(document.querySelectorAll(".mobile-menu > li"))
         document.querySelectorAll(".mobile-menu > li").forEach( (ele)=> {
             ele.addEventListener('click', (event) => {
                 event.stopPropagation()
