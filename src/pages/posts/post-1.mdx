@@ -13,11 +13,13 @@ location: 'Shimla, HP'
 ---
 import BlogPostHeading from '../../components/BlogPostHeading.astro'
 import BlogPostHeroImage from '../../components/BlogPostHeroImage.astro'
+import ShimlaImage from '../../assets/Shimla.jpg'
 
 <BlogPostHeading title={frontmatter.title} />
 
-<BlogPostHeroImage imageUrl={frontmatter.image.url} imageAltText={frontmatter.image.alt} />
+![frontmatter.image.alt](../../assets/Shimla.jpg)
 
+<Image src={ShimlaImage.src} alt={frontmatter.image.alt} />
 Shimla offers much more than charming colonial buildings against a backdrop of the magnificent snow-capped Himalayas.
 Much more than the dozens of Bollywood songs set on Mall Road or its oldest boarding schools. 
 The upper reaches around the Shimla region offer skating on natural ice as well as host the MTB Himalaya
