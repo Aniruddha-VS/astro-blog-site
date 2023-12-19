@@ -1,6 +1,9 @@
 ---
 const {imageUrl, imageAltText} = Astro.props
+
+const images = import.meta.glob('/src/assets/*.{jpeg,jpg,png,gif}')
+
 ---
 
 
-<img  class="py-8 h-[32rem] object-cover w-full" src={imageUrl} alt={imageAltText } />
+<img  class="py-8 h-[32rem] object-cover w-full" src={images[imageUrl]()} alt={imageAltText } />
