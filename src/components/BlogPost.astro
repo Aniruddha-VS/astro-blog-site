@@ -16,7 +16,7 @@ const imageWidth = finalImage["default"]["width"]
         <div class="h-[28rem] overflow-hidden" style=`background-size: cover; background-position: center; background-image: url(${blurUrl});`>
             <!-- <img style="width: 100vw;" class="object-cover w-full h-full cursor-pointer transition duration-500  hover:scale-105" srcset=`${image} 1600w` alt="feature" loading="lazy" decoding="async"></div>  -->
             <Image fetchPriority="high" alt={altText} widths={[240, 540, 720, imageWidth]}
-            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${imageWidth}px`} src={imagesObj[imagePath]()} loading='eager' quality="mid">
+            sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${imageWidth}px`} src={imagesObj[imagePath]()} loading='eager' quality="mid"class="bg-center bg-cover">
         </div>
         
         <div class="text-sm flex justify-between pt-2.5 group-hover:text-teal-700 dark:group-hover:text-yellow-500">

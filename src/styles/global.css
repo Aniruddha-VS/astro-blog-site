@@ -6,7 +6,7 @@
 @layer components {
     
     .expanded {
-        @apply  font-montserrat font-bold bg-white dark:bg-[#0d0f14] z-[1] md:hidden absolute top-6 right-0  w-[50vw] h-[40vh] border-2 rounded-md  list-none flex flex-col justify-center items-center gap-8 ;
+        @apply  font-montserrat font-bold bg-white dark:bg-[#0d0f14] z-[1] md:hidden absolute top-2 md:top-6 right-0  w-[50vw] h-[40vh] border-2 rounded-md  list-none flex flex-col justify-center items-center gap-8 ;
     }
 
     .md-nav {

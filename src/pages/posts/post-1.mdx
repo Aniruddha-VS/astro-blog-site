@@ -15,12 +15,13 @@ import { Image } from 'astro:assets'
 import BlogPostHeading from '../../components/BlogPostHeading.astro'
 import ShimlaImage from '../../assets/Shimla.jpg'
 
+<article>
 <BlogPostHeading title={frontmatter.title} />
-
+<br></br>
 <Image src={ShimlaImage} alt={frontmatter.image.alt} widths={[240, 540, 720, ShimlaImage.width]}
-  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} />
+  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} >
 
-
+<br></br>
 Shimla offers much more than charming colonial buildings against a backdrop of the magnificent snow-capped Himalayas.
 Much more than the dozens of Bollywood songs set on Mall Road or its oldest boarding schools. 
 The upper reaches around the Shimla region offer skating on natural ice as well as host the MTB Himalaya
@@ -35,3 +36,4 @@ Begins at the appropriately named ‘Scandal Point’ where legend has it that t
 
 Pass Christ Church on the ridge that was built back in 1857 with its tower clock and fresco designed by Rudyard Kipling’s father. Take a break at The Town Hall’s steps, but make way for officials as it’s still used by the Municipal Corporation of Shimla. Get transported to the grandeur and aura of times gone by at the century-old Gaiety Theatre before you move on to the ancient Kali Bari Temple. Stop for a breather at the neo-Gothic Gorton Castle set in the midst of gigantic Deodars. Walk past the enormous Vidhan Sabha to the old Victorian mansion that now houses the Himachal State Museum with its numerous cultural treasures. Be prepared for a pleasant colonial hangover at the end of this walk.
 
+</article>
