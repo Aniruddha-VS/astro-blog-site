@@ -15,8 +15,9 @@ import BlogPostHeading from '../../components/BlogPostHeading.astro'
 import ShimlaImage from '../../assets/Shimla.jpg'
 
 <article>
-<BlogPostHeading title={frontmatter.title} />
 <div class="list-disc space-y-4 md:space-y-8">
+    <BlogPostHeading title={frontmatter.title} />
+
     <Image src={ShimlaImage} alt={frontmatter.image.alt} widths={[240, 540, 720, ShimlaImage.width]}
       sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} class="h-[28rem] object-center object-cover"/>
 
