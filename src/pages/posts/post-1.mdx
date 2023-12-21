@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Wandering Through 2023: A Tapestry of New Places, Tech, and Entertainment'
+title: 'Wandering Through 2023'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 image:
@@ -15,17 +15,11 @@ import BlogPostHeading from '../../components/BlogPostHeading.astro'
 import ShimlaImage from '../../assets/Shimla.jpg'
 
 <article>
-<div class="space-y-4 md:space-y-8">
+  <div class="space-y-4 md:space-y-8">
     <BlogPostHeading title={frontmatter.title} />
 
     <Image src={ShimlaImage} alt={frontmatter.image.alt} widths={[240, 540, 720, ShimlaImage.width]}
       sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${ShimlaImage.width}px`} class="h-[28rem] object-center object-cover"/>
-
-    <p>On top of everything comes to mind my work trip to Banglore. One and half month stay at a PG. A true reality check. </p> 
-    
-    <p>It has got me thinking i need to move faster and not get stagnated. Focus on how to people and connections are important. I dont wanna be isolated. People are necessary.  </p>
-    
-    <p>How taking actions and giving tit for tat is the only way to handle some problems.</p>
     
     <p>I actually read Chetan Bhagat a lot. My favorite one to read was “One Indian Girl”.</p>
     
@@ -42,37 +36,36 @@ import ShimlaImage from '../../assets/Shimla.jpg'
     <p>Favorite cinema movements</p>
     
     <ul class="list-disc list-inside">
-    
-    <li> Salman khan cameo in Pathan. </li> 
-    <li>  John wick 4 literally stunning.  </li>
-    <li>  Mission Impossible Dead Reconing. Masterpeice.  </li>
-    <li>  Animal . Dolbywallya action sequence.  </li>
-    <li>  Schits creeks first time watch for me. And loved it.  </li>
-    <li> 12th fail was nice.  </li>
-    <li> Gilmore Girls was superb.  </li>
-    <li> The Chef was great.  </li>
-    <li> Morderm family.  </li>
-    <li> Rocket Boys 2 .Offcourse APJ, VSB, and HB was ❤️.  </li>
+        <li> Salman khan cameo in Pathan. </li> 
+        <li> John wick 4 literally stunning.  </li>
+        <li> Mission Impossible Dead Reconing. Masterpeice.  </li>
+        <li> Animal . Dolbywallya action sequence.  </li>
+        <li> Schits creeks first time watch for me. And loved it.  </li>
+        <li> 12th fail was nice.  </li>
+        <li> Gilmore Girls was superb.  </li>
+        <li> The Chef was great.  </li>
+        <li> Morderm family.  </li>
+        <li> Rocket Boys 2 .Offcourse APJ, VSB, and HB was ❤️.  </li>
     </ul>
    <p> Watching Tried and Refused production made me analyze movies a bit. Question why did i like the movie. </p>
 
-<p> Favorite foods i tried this year. </p>
-    <ul class="list-disc list-inside">
-    <li> MTR rava idlli, Banglore.  </li>
-    <li> Maylari Dosa, Mysuru.  </li>
-    <li> Mava cake, German Bakery, Pune.  </li>
-    <li> CTR Dosa, Bangalore.  </li>
-    <li> Truffles Burger, Bangalore.  </li>
-    </ul>
-<p> Favorite places i discovered. </p>
-    <ul class="list-disc list-inside">
-    <li> Mysore Place. Blew my mind really. I couldn't stop my self from getting gasping. Finding people who speak Marathi there was also pleasant.  </li>
-    <li> Waterfall of Ajanta. No network place whose background was so stunning felt like it was from Kashmir or something.  </li>
-    <li> Vidhan Soudha, Bangalore. The moment you step out lf the metro station outside it you realise how massive the building really is. Could not stop taking pictures.  </li>
-    <li> Dagduseth Temple, Pune. Electric atmosphere.  </li>
-    <li> Sri Chamundeshwari Temple. Just the location and vibes of the place. Divine.  </li>
-    <li> Parsi point Panchgani. Horse ride at Table land, Panchgani. Tigers point was nice.  </li>
-    <li> Rahul subramanyum stand up at Church Street, Banglore.  </li>
-    </ul>
-</div>
+    <p> Favorite foods i tried this year. </p>
+        <ul class="list-disc list-inside">
+            <li> MTR rava idlli, Banglore.  </li>
+            <li> Maylari Dosa, Mysuru.  </li>
+            <li> Mava cake, German Bakery, Pune.  </li>
+            <li> CTR Dosa, Bangalore.  </li>
+            <li> Truffles Burger, Bangalore.  </li>
+        </ul>
+    <p> Favorite places i discovered. </p>
+        <ul class="list-disc list-inside">
+            <li> Mysore Place. Blew my mind really. I couldn't stop my self from getting gasping. Finding people who speak Marathi there was also pleasant.  </li>
+            <li> Waterfall of Ajanta. No network place whose background was so stunning felt like it was from Kashmir or something.  </li>
+            <li> Vidhan Soudha, Bangalore. The moment you step out lf the metro station outside it you realise how massive the building really is. Could not stop taking pictures.  </li>
+            <li> Dagduseth Temple, Pune. Electric atmosphere.  </li>
+            <li> Sri Chamundeshwari Temple. Just the location and vibes of the place. Divine.  </li>
+            <li> Parsi point Panchgani. Horse ride at Table land, Panchgani. Tigers point was nice.  </li>
+            <li> Rahul subramanyum stand up at Church Street, Banglore.  </li>
+        </ul>
+  </div>
 </article>
